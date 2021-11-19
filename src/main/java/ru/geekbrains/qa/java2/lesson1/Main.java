@@ -11,7 +11,7 @@ public class Main {
         Obstacle[] obstacles = prepareObstacles();
         Participant[] participantsDogs = prepareParticipants("Песик ", 4);
         Participant[] participantsCats = prepareParticipants("Котик ", 4);
-        
+
         Course c = new Course(obstacles);
         Team teamDogs = new Team("Морские песики", participantsDogs);
         Team teamCats = new Team("Морские котики", participantsCats);
@@ -19,11 +19,11 @@ public class Main {
         doIt(c, teamCats);
     }
 
-    private static void doIt(Course c, Team teamDogs) {
-        c.doIt(teamDogs);
-        teamDogs.showResults();
-        teamDogs.showPassedParticipants();
-        System.out.println(teamDogs);
+    private static void doIt(Course c, Team team) {
+        c.doIt(team);
+        team.showResults();
+        team.showPassedParticipants();
+        System.out.println(team);
     }
 
     private static Obstacle[] prepareObstacles() {
