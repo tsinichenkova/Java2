@@ -13,8 +13,10 @@ public class HomeWork1 {
         }
 
         System.out.println("Вывести список уникальных слов, из которых состоит массив");
-        for (String key : uniqWords.keySet()) {
-            System.out.println(key);
+        for (Map.Entry<String, Integer> pair : uniqWords.entrySet()) {
+            if (pair.getValue().equals(1)) {
+                System.out.println(pair.getKey());
+            }
         }
 
         System.out.println("----------------------------------------------");
