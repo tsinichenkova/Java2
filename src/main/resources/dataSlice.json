@@ -1,0 +1,443 @@
+{
+  "feederAudit": {
+    "createTimestamp": "LocalDateTime",
+    "sourceSystem": "Term"
+  },
+  "patient": {
+    "id": "DataValue<Long>",
+    "disability": "DataValue<Term>",
+    "ethnicGroup": "DataValue<Term>",
+    "tumorCount": "DataValue<Integer>",
+    "primaryTumor": "DataValue<String>",
+    "registrationStatus": "DataValue<Term>",
+    "resident": "DataValue<Term>",
+    "socioProfGroup": "DataValue<Term>",
+    "personalData": {
+      "birthDate": "DataValue<LocalDate>",
+      "firstName": "DataValue<String>",
+      "gender": "DataValue<Term>",
+      "lastName": "DataValue<String>",
+      "middleName": "DataValue<String>",
+      "snils": "DataValue<String>",
+      "patientPolicy": {
+        "number": "DataValue<String>",
+        "sMOName": "DataValue<Term>",
+        "startDate": "DataValue<LocalDate>"
+      }
+    },
+    "addressOfLiving": {
+      "area": "DataValue<String>",
+      "flat": "DataValue<String>",
+      "house": "DataValue<String>",
+      "moscowAdministrativeRegion": "DataValue<String>",
+      "place": "DataValue<String>",
+      "postalCode": "DataValue<String>",
+      "region": "DataValue<String>",
+      "street": "DataValue<String>"
+    },
+    "addressOfRegistration": {
+      "area": "DataValue<String>",
+      "flat": "DataValue<String>",
+      "house": "DataValue<String>",
+      "moscowAdministrativeRegion": "DataValue<String>",
+      "place": "DataValue<String>",
+      "postalCode": "DataValue<String>",
+      "region": "DataValue<String>",
+      "street": "DataValue<String>"
+    },
+    "clinicalGroups": [
+      {
+        "establishDate": "DataValue<LocalDate>",
+        "value": "DataValue<Term>"
+      }
+    ],
+    "identityDocument": {
+      "number": "DataValue<String>",
+      "series": "DataValue<String>",
+      "startDate": "DataValue<LocalDate>",
+      "type": "DataValue<String>"
+    },
+    "contactData": {
+      "contactPhone": "DataValue<String>",
+      "email": "DataValue<String>",
+      "mobilePhone": "DataValue<String>"
+    },
+    "registrations": [
+      {
+        "endDate": "DataValue<LocalDate>",
+        "registered": "DataValue<Term>",
+        "removeCause": "DataValue<Term>",
+        "startDate": "DataValue<LocalDate>"
+      }
+    ],
+    "factOfDeath": {
+      "autopsy": "DataValue<Term>",
+      "causeOfDeath": "DataValue<Term>",
+      "deathDate": "DataValue<LocalDate>"
+    },
+    "yearsStates": [
+      {
+        "value": "DataValue<Term>",
+        "year": "DataValue<Integer>"
+      }
+    ],
+    "observingOrganizations": [
+      {
+        "value": "DataValue<Term>",
+        "parentMedicalOrganization": "DataValue<Term>",
+        "name": "DataValue<String>"
+      }
+    ]
+  },
+  "diagnoses": [
+    {
+      "autopsyResult": "DataValue<Term>",
+      "confirmationMethod": "DataValue<Term>",
+      "dispensaryRegistrationStatus": "DataValue<Term>",
+      "establishDate": "DataValue<LocalDate>",
+      "id": "DataValue<String>",
+      "isMultiple": "DataValue<Term>",
+      "isPrimary": "DataValue<Boolean>",
+      "lateDiagnosticReason": "DataValue<Term>",
+      "morphologicalType": "DataValue<Term>",
+      "morphologicalVerificationDate": "DataValue<LocalDate>",
+      "value": "DataValue<Term>",
+      "patientAgeAtEstablish": "DataValue<Integer>",
+      "serialNumber": "DataValue<Integer>",
+      "side": "DataValue<Term>",
+      "situationDetection": "DataValue<Term>",
+      "typeOnClassifierWHO": "DataValue<Term>",
+      "medicalOrganizationDiagnosisEstablishedIn": {
+        "value": "DataValue<Term>",
+        "parentMedicalOrganization": "DataValue<Term>",
+        "name": "DataValue<String>"
+      },
+      "stateControls": [
+        {
+          "patientGeneralState": "DataValue<Term>",
+          "scheduledDate": "DataValue<LocalDate>",
+          "turnoutDate": "DataValue<LocalDate>",
+          "tumorMonitorings": [
+            {
+              "value": "DataValue<Term>"
+            }
+          ]
+        }
+      ],
+      "dispensaryRegistrations": [
+        {
+          "causeOfRemoval": "DataValue<Term>",
+          "endDate": "DataValue<LocalDate>",
+          "registered": "DataValue<Term>",
+          "startDate": "DataValue<LocalDate>",
+          "observingOrganization": {
+            "value": "DataValue<Term>",
+            "parentMedicalOrganization": "DataValue<Term>",
+            "name": "DataValue<String>"
+          }
+        }
+      ],
+      "geneticsAbnormalities": [
+        {
+          "value": "DataValue<Term>"
+        }
+      ],
+      "immunohistochemicalTypes": [
+        {
+          "numericResult": "DataValue<Integer>",
+          "significative": "DataValue<Term>",
+          "terminologicalResult": "DataValue<Term>",
+          "textResult": "DataValue<String>"
+        }
+      ],
+      "molecularGeneticTypes": [
+        {
+          "significative": "DataValue<Term>",
+          "terminologicalResult": "DataValue<Term>",
+          "textResult": "DataValue<String>"
+        }
+      ],
+      "councils": [
+        {
+          "date": "DataValue<LocalDate>",
+          "primaryConference": "DataValue<Boolean>",
+          "protocolNumber": "DataValue<String>",
+          "result": "DataValue<Term>",
+          "conferenceOrganization": {
+            "value": "DataValue<Term>",
+            "parentMedicalOrganization": "DataValue<Term>",
+            "name": "DataValue<String>"
+          },
+          "therapyTactics": [
+            {
+              "value": "DataValue<Term>",
+              "stage": "DataValue<Integer>",
+              "therapyProtocol": "DataValue<Term>"
+            }
+          ]
+        }
+      ],
+      "stage": {
+        "method": "DataValue<Term>",
+        "tNMStage": {
+          "gradeMalignance": "DataValue<Term>",
+          "stage": "DataValue<Term>",
+          "pathological": {
+            "M": "DataValue<Term>",
+            "N": "DataValue<Term>",
+            "T": "DataValue<Term>"
+          },
+          "clinical": {
+            "M": "DataValue<Term>",
+            "N": "DataValue<Term>",
+            "T": "DataValue<Term>"
+          },
+          "metastasesLocalizations": [
+            {
+              "value": "DataValue<Term>"
+            }
+          ]
+        },
+        "gastrointestinalLimbStage": {
+          "value": "DataValue<Term>"
+        },
+        "multipleMyelomaStage": {
+          "value": "DataValue<Term>"
+        },
+        "chronicLymphocyticLeukemiaStage": {
+          "value": "DataValue<Term>"
+        },
+        "annArborStage": {
+          "value": "DataValue<Term>"
+        },
+        "sBMurphyStage": {
+          "value": "DataValue<Term>"
+        },
+        "iSLE_EORTCStage": {
+          "B": "DataValue<Term>",
+          "M": "DataValue<Term>",
+          "N": "DataValue<Term>",
+          "T": "DataValue<Term>",
+          "tumorProcessStage": "DataValue<Term>"
+        },
+        "chronicMyeloidLeukemiaPhase": {
+          "value": "DataValue<Term>"
+        },
+        "sIOPStageOfNephroblastoma": {
+          "value": "DataValue<Term>"
+        },
+        "iNSSNeuroblastomaStage": {
+          "value": "DataValue<Term>"
+        },
+        "medulloblastomaClassificationOnChang": {
+          "M": "DataValue<Term>",
+          "T": "DataValue<Term>"
+        },
+        "iNRGSSNeuroblastomaStage": {
+          "value": "DataValue<Term>"
+        },
+        "wHOLymphomClassification": {
+          "value": "DataValue<Term>"
+        },
+        "hepatoblastomaStageOnPRETEXT": {
+          "value": "DataValue<Term>"
+        }
+      },
+      "therapy": {
+        "factOfLateComplicationsOfTherapy": "DataValue<Boolean>",
+        "reasonIncompleteTherapy": "DataValue<Term>",
+        "specialTherapyEndDate": "DataValue<LocalDate>",
+        "specialTherapyStartDate": "DataValue<LocalDate>",
+        "therapyPerformed": "DataValue<Term>",
+        "lateComplicationsOfTherapy": [
+          {
+            "value": "DataValue<Term>"
+          }
+        ],
+        "radioTherapies": [
+          {
+            "environment": "DataValue<Term>",
+            "deviceUsageIndication": "DataValue<Boolean>",
+            "endDate": "DataValue<LocalDate>",
+            "complicationsFact": "DataValue<Boolean>",
+            "radiationReactionsFact": "DataValue<Boolean>",
+            "hospitalizationDate": "DataValue<LocalDate>",
+            "irradiationMethod": "DataValue<Term>",
+            "kind": "DataValue<Term>",
+            "mode": "DataValue<Term>",
+            "nature": "DataValue<Term>",
+            "startDate": "DataValue<LocalDate>",
+            "therapyOrganization": {
+              "value": "DataValue<Term>",
+              "parentMedicalOrganization": "DataValue<Term>",
+              "name": "DataValue<String>"
+            },
+            "acuteRadiationReactions": [
+              {
+                "degree": "DataValue<Term>",
+                "organ": "DataValue<Term>",
+                "radiationReactionDescriptions": [
+                  {
+                    "value": "DataValue<Term>"
+                  }
+                ]
+              }
+            ],
+            "lateRadiationReactions": [
+              {
+                "degree": "DataValue<Term>",
+                "organ": "DataValue<Term>",
+                "radiationReactionDescriptions": [
+                  {
+                    "value": "DataValue<Term>"
+                  }
+                ]
+              }
+            ],
+            "radiomodifiers": [
+              {
+                "value": "DataValue<Term>"
+              }
+            ],
+            "topometries": [
+              {
+                "value": "DataValue<Term>"
+              }
+            ],
+            "complicationsOfTherapy": [
+              {
+                "value": "DataValue<Term>"
+              }
+            ],
+            "totalFocalDoseOnTumor": {
+              "value": "DataValue<Double>"
+            },
+            "totalFocalDoseToDistantMetastasisZones": {
+              "value": "DataValue<Double>"
+            },
+            "totalFocalDoseToRegionalMetastasisZones": {
+              "value": "DataValue<Double>"
+            },
+            "irradiationCharacteristics": [
+              {
+                "deviceType": "DataValue<Term>",
+                "fractionsNumber": "DataValue<Integer>",
+                "irradiationArea": "DataValue<String>",
+                "theUseOfRadiationTherapyInTheStagesOfTreatment": "DataValue<Term>",
+                "radiationTherapyMethodologies": [
+                  {
+                    "value": "DataValue<Term>"
+                  }
+                ],
+                "singleFocalDose": {
+                  "value": "DataValue<Double>"
+                },
+                "totalFocalDose": {
+                  "value": "DataValue<Double>"
+                }
+              }
+            ]
+          }
+        ],
+        "drugTherapies": [
+          {
+            "chemotherapyCourseNumber": "DataValue<Integer>",
+            "environment": "DataValue<Term>",
+            "direction": "DataValue<Term>",
+            "endDate": "DataValue<LocalDate>",
+            "complicationsFact": "DataValue<Boolean>",
+            "hospitalizationDate": "DataValue<LocalDate>",
+            "immunotherapyCycleNumber": "DataValue<Integer>",
+            "kind": "DataValue<Term>",
+            "line": "DataValue<Integer>",
+            "schema": "DataValue<Term>",
+            "startDate": "DataValue<LocalDate>",
+            "therapyProtocol": "DataValue<Term>",
+            "therapyOrganization": {
+              "value": "DataValue<Term>",
+              "parentMedicalOrganization": "DataValue<Term>",
+              "name": "DataValue<String>"
+            },
+            "complicationsOfTherapy": [
+              {
+                "value": "DataValue<Term>"
+              }
+            ],
+            "drugTherapyTypes": [
+              {
+                "value": "DataValue<Term>"
+              }
+            ],
+            "injectedDrugs": [
+              {
+                "dose": "DataValue<Double>",
+                "historicalName": "DataValue<String>",
+                "iNN": "DataValue<Term>",
+                "inventedName": "DataValue<Term>",
+                "methodOfApp": "DataValue<Term>",
+                "type": "DataValue<Term>",
+                "unit": "DataValue<Term>",
+                "injectionDays": [
+                  {
+                    "daily": "DataValue<Boolean>",
+                    "value": "DataValue<String>"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "surgicalTherapies": [
+          {
+            "environment": "DataValue<Term>",
+            "date": "DataValue<LocalDate>",
+            "direction": "DataValue<Term>",
+            "complicationsFact": "DataValue<Boolean>",
+            "hospitalizationDate": "DataValue<LocalDate>",
+            "name": "DataValue<Term>",
+            "complicationsOfTherapy": [
+              {
+                "value": "DataValue<Term>"
+              }
+            ],
+            "therapyOrganization": {
+              "value": "DataValue<Term>",
+              "parentMedicalOrganization": "DataValue<Term>",
+              "name": "DataValue<String>"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "validation": {
+    "errorCount": "Integer",
+    "finishTimestamp": "LocalDateTime",
+    "startTimestamp": "LocalDateTime",
+    "valid": "Boolean",
+    "rulesExecutionResults": [
+      {
+        "exception": "String",
+        "ruleExecution": {
+          "fieldName": "String",
+          "name": "String",
+          "version": "String"
+        },
+        "constraintValidationResults": [
+          {
+            "errorType": "String",
+            "fieldPath": "String",
+            "systemErrorMessage": "String",
+            "userErrorMessage": "String",
+            "validationResult": "Term",
+            "affectingFieldsPaths": [
+              {
+                "value": "String"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

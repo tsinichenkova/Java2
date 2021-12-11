@@ -1,0 +1,59 @@
+{
+    "value": "2021-11-25T12:12:11.000",
+    "causeOfAbsence": {
+      "code": "99",
+      "schema": "ru.mos.emias.absence",
+      "value": "Неизвестно"
+    },
+    "sourceSystem": {
+      "code": "1",
+      "schema": "ru.mos.emias.oncology",
+      "value": "ЕМИАС.Онкология"
+    },
+    "documentSource": {
+      "author": "ZBazvanova",
+      "cct": 77063,
+      "dateCreated": "2021-11-25T12:12:11.000+03:00",
+      "documentId": "0a5b9da2-340f-4c8e-ac50-441efce3e6cb"
+    },
+    "historicalDataValues": [
+      {
+        "value": "2021-11-25T12:12:11.000",
+        "causeOfAbsence": {
+          "code": "99",
+          "schema": "ru.mos.emias.absence",
+          "value": "Неизвестно"
+        },
+        "sourceSystem": {
+          "code": "1",
+          "schema": "ru.mos.emias.oncology",
+          "value": "ЕМИАС.Онкология"
+        },
+        "documentSource": {
+          "author": "InBerezovskaya",
+          "cct": 56080,
+          "dateCreated": "2020-11-26T12:12:11.000+03:00",
+          "documentId": "988C986C-EC1E-40A4-88FA-E69A2AA9C1D0"
+        }
+      },
+      {
+        "value": "2021-11-25T12:12:11.000",
+        "causeOfAbsence": {
+          "code": "99",
+          "schema": "ru.mos.emias.absence",
+          "value": "Неизвестно"
+        },
+        "sourceSystem": {
+          "code": "1",
+          "schema": "ru.mos.emias.oncology",
+          "value": "ЕМИАС.Онкология"
+        },
+        "documentSource": {
+          "author": "KatGrechuhina",
+          "cct": 77064,
+          "dateCreated": "2021-10-24T12:12:11.000+03:00",
+          "documentId": "c91b7ccf-9ae9-487b-8dd0-e87c3c708528::default::2"
+        }
+      }
+    ]
+  }

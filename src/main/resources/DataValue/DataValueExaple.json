@@ -1,0 +1,22 @@
+{
+    "DataValue": {
+        "value": "T",
+        "causeOfAbsence": {
+          "code": "String",
+          "schema": "String",
+          "value": "String"
+        },
+        "sourceSystem": {
+          "code": "String",
+          "schema": "String",
+          "value": "String"
+        },
+        "DocumentSource": {
+          "author": "String",
+          "cct": "Integer",
+          "dateCreated": "DateTime",
+          "documentId": "String"
+        },
+        "historicalDataValues": "DataValue<T>"
+      }
+}
