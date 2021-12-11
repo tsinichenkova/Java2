@@ -10,6 +10,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.time.LocalDateTime;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Utils {
@@ -72,6 +74,17 @@ public class Utils {
         for (Map.Entry<String, String> entry : values.entrySet()) {
             DocumentContext doc = JsonPath.parse(message).set(entry.getKey(), entry.getValue());
             message = doc.jsonString();
+        }
+        return message;
+    }
+
+    public static String copyNodes(String message, HashMap<String, Integer> nodes) {
+        for (Map.Entry<String, Integer> entry : nodes.entrySet()) {
+            LinkedHashMap value = JsonPath.read(message, entry.getKey() + "[0]");
+            for (int i= 0; i < entry.getValue(); i++) {
+                DocumentContext doc = JsonPath.parse(message).add(entry.getKey(), value);
+                message = doc.jsonString();
+            }
         }
         return message;
     }
