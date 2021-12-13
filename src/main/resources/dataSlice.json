@@ -3,6 +3,10 @@
     "createTimestamp": "LocalDateTime",
     "sourceSystem": "Term"
   },
+  "processingInfo": {
+    "productVersion": "Integer", 
+    "saveTimestamp": "LocalDateTime"
+  },
   "patient": {
     "id": "DataValue<Long>",
     "disability": "DataValue<Term>",
