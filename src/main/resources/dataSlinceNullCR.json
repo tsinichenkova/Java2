@@ -1,0 +1,44 @@
+{
+  "feederAudit": {
+    "createTimestamp": "LocalDateTime",
+    "sourceSystem": "Term"
+  },
+  "patient": {
+    "id": "DataValue<Long>",
+    "registrationStatus": "DataValue<Term>",
+    "personalData": {
+      "birthDate": "DataValue<LocalDate>",
+      "firstName": "DataValue<String>",
+      "gender": "DataValue<Term>",
+      "lastName": "DataValue<String>",
+      "middleName": "DataValue<String>",
+      "patientPolicy": {
+        "number": "DataValue<String>"
+      }
+    },
+    "registrations": [
+      {
+        "endDate": "DataValue<LocalDate>",
+        "registered": "DataValue<Term>",
+        "removeCause": "DataValue<Term>",
+        "startDate": "DataValue<LocalDate>"
+      }
+    ],
+    "yearsStates": [
+      {
+        "value": "DataValue<Term>",
+        "year": "DataValue<Integer>"
+      }
+    ]
+  },
+  "diagnoses": [
+    {
+      "establishDate": "DataValue<LocalDate>",
+      "value": "DataValue<Term>",
+      "patientAgeAtEstablish": "DataValue<Integer>",
+      "observingOrganization": {
+        "value": "DataValue<Term>"
+      }
+    }
+  ]
+}

@@ -72,35 +72,48 @@ public class Utils {
         schemas.put("$.patient.registrationStatus.value.schema", "ru.mos.emias.terminology.oncods.patient-registration-status");
         schemas.put("$.patient.registrations[0].registered.value.schema", "ru.mos.emias.terminology.oncods.registration-taking-cause");
         schemas.put("$.patient.registrations[0].removeCause.value.schema", "ru.mos.emias.terminology.oncods.patient-registration-status");
-        schemas.put("diagnoses[0].stage.tNMStage.stage.value.schema", "ru.mos.emias.terminology.oncods.stage-of-tumor-process");
-        schemas.put("diagnoses[0].dispensaryRegistrations[0].observingOrganization.value.value.schema", "ru.mos.emias.terminology.oncods.medical-organisations");
-
+        schemas.put("$.diagnoses[0].stage.tNMStage.stage.value.schema", "ru.mos.emias.terminology.oncods.stage-of-tumor-process");
+        schemas.put("$.diagnoses[0].dispensaryRegistrations[0].observingOrganization.value.value.schema", "ru.mos.emias.terminology.oncods.medical-organisations");
+        schemas.put("$.diagnoses[0].observingOrganization.value.value.schema", "ru.mos.emias.terminology.oncods.medical-organisations");
+        schemas.put("$.diagnoses[0].isMultiple.value.schema", null);
+        schemas.put("$.diagnoses[0].side.value.schema", null);
+        schemas.put("$.diagnoses[0].confirmationMethod.value.schema", "ru.mos.emias.terminology.oncods.diagnosis-confirmation-method");
+        schemas.put("$.diagnoses[0].situationDetection.value.schema", "ru.mos.emias.terminology.oncods.tumor-situation-detection");
+        schemas.put("$.diagnoses[0].therapy.therapyPerformed.value.schema", "ru.mos.emias.terminology.oncods.therapy-focus");
+        schemas.put("$.diagnoses[0].morphologicalType.value.schema", "ru.mos.emias.terminology.oncods.icd-o-3");
+        schemas.put("$.diagnoses[0].immunohistochemicalTypes[0].terminologicalResult.value.schema", "ru.mos.emias.terminology.oncods.ihc");
+        schemas.put("$.diagnoses[0].molecularGeneticTypes[0].terminologicalResult.value.schema", "ru.mos.emias.terminology.oncods.molecular-genetic");
+        schemas.put("$.patient.yearsStates[0].value.value.schema", "ru.mos.emias.terminology.oncods.end-of-year-condition-for-pre-onco");
         return schemas;
     }
 
     public static String replaceValues(String message, HashMap<String, String> values) throws IOException {
         for (Map.Entry<String, String> entry : values.entrySet()) {
-            Object object  = JsonPath.read(message, entry.getKey());
-            if (object instanceof Long ) {
-                DocumentContext doc = JsonPath.parse(message).set(entry.getKey(), Long.parseLong(entry.getValue()));
-                message = doc.jsonString();
+            try {
+                Object object  = JsonPath.read(message, entry.getKey());
+                if (object instanceof Long ) {
+                    DocumentContext doc = JsonPath.parse(message).set(entry.getKey(), Long.parseLong(entry.getValue()));
+                    message = doc.jsonString();
+                }
+                if (object instanceof Integer ) {
+                    DocumentContext doc = JsonPath.parse(message).set(entry.getKey(), Integer.parseInt(entry.getValue()));
+                    message = doc.jsonString();
+                }
+                if (object instanceof String ) {
+                    DocumentContext doc = JsonPath.parse(message).set(entry.getKey(), entry.getValue());
+                    message = doc.jsonString();
+                }
+                if (object instanceof Double ) {
+                    DocumentContext doc = JsonPath.parse(message).set(entry.getKey(), Double.parseDouble(entry.getValue()));
+                    message = doc.jsonString();
+                }
+                if (object instanceof Boolean ) {
+                    DocumentContext doc = JsonPath.parse(message).set(entry.getKey(), Boolean.parseBoolean(entry.getValue()));
+                    message = doc.jsonString();
+                }
+            } catch (Exception ex) {
             }
-            if (object instanceof Integer ) {
-                DocumentContext doc = JsonPath.parse(message).set(entry.getKey(), Integer.parseInt(entry.getValue()));
-                message = doc.jsonString();
-            }
-            if (object instanceof String ) {
-                DocumentContext doc = JsonPath.parse(message).set(entry.getKey(), entry.getValue());
-                message = doc.jsonString();
-            }
-            if (object instanceof Double ) {
-                DocumentContext doc = JsonPath.parse(message).set(entry.getKey(), Double.parseDouble(entry.getValue()));
-                message = doc.jsonString();
-            }
-            if (object instanceof Boolean ) {
-                DocumentContext doc = JsonPath.parse(message).set(entry.getKey(), Boolean.parseBoolean(entry.getValue()));
-                message = doc.jsonString();
-            }
+
 
         }
         return message;
