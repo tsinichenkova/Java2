@@ -17,6 +17,7 @@ public class UserInterface {
 
             System.out.println("Введите ответ: 1 - Получить текущую погоду, " +
                 "2 - Получить погоду на следующие 5 дней, " +
+                "3 - Вывести список всех запросов, " +
                 "выход (exit) - завершить работу");
             String result = scanner.nextLine();
 

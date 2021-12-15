@@ -1,4 +1,4 @@
-package ru.geekbrains.qa.java2.lesson8.entity;
+package ru.geekbrains.qa.java2.lesson8.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
