@@ -15,7 +15,7 @@ public class HomeWork {
     на которые подписаны студенты.
     */
 
-    static List<Course> uniqCourses(List<Student> students) {
+    public static List<Course> uniqCourses(List<Student> students) {
         return students.stream()
                 .map(Student::getAllCourses)
                 .flatMap(List::stream)
@@ -29,7 +29,7 @@ public class HomeWork {
     (любознательность определяется количеством курсов).
     */
 
-    static List<Student> getThreeCuriosStudents(List<Student> students) {
+    public static List<Student> getThreeCuriosStudents(List<Student> students) {
         return students.stream()
                 .sorted((s1, s2) -> s2.getAllCourses().size() - s1.getAllCourses().size())
                 .limit(3)
@@ -42,7 +42,7 @@ public class HomeWork {
     которые посещают этот курс.
     */
 
-    static List<Student> getStudentsInCourses(List<Student> students, Course course) {
+    public static List<Student> getStudentsInCourses(List<Student> students, Course course) {
         return students.stream()
                 .filter(s -> s.getAllCourses().contains(course))
                 .collect(Collectors.toList());
